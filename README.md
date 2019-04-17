@@ -62,7 +62,7 @@ Labs using Azure Services to build Azure IoT End to End Solutions connecting rea
 [Automatic Device Configuration](https://github.com/kenhausman/azureiotlabs/blob/master/automaticdeviceconfiguration/README.md)
 
 
-### Module 10: MXChip Revisited: IoT Workbench Example
+### Module 10: MXChip Revisited... Command and Control through IoTHub
 
 **Duration**: 30 minutes
 
