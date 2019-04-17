@@ -46,7 +46,7 @@ Labs using Azure Services to build Azure IoT End to End Solutions connecting rea
 
 **Duration**: 60 minutes
 
-[Azure Date Lake Analytics Lab](https://github.com/kenhausman/azureiotlabs/blob/master/DatalakeAnalytics/README.md)
+[SQL Data Warehouse Lab](https://github.com/kenhausman/azureiotlabs/blob/master/SQLDataWarehouse/README.md)
 
 ### Module 8: Load Test using Device Simulator
 
