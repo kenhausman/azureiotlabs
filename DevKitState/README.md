@@ -1,4 +1,4 @@
-# MXChip Revisited... Command and Control through IoTHub
+# Command and Control through IoTHub
 
 In this tutorial, you can monitor the MXChip IoT DevKit WiFi information and sensor states and control the color of the user LED using Azure IoT Hub device twins.
 
