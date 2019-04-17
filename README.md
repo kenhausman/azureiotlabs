@@ -60,3 +60,10 @@ Labs using Azure Services to build Azure IoT End to End Solutions connecting rea
 **Duration**: 30 minutes
 
 [Automatic Device Configuration](https://github.com/Azure-Samples/azureiotlabs/blob/master/automaticdeviceconfiguration/README.md)
+
+
+### Module 10: MXChip Revisited: IoT Workbench Example
+
+**Duration**: 30 minutes
+
+[Automatic Device Configuration](https://github.com/Azure-Samples/azureiotlabs/blob/master/DevKitState/README.md)
