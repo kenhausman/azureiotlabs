@@ -1,42 +1,42 @@
 # Batch Analytics
 
-## Batch Analytics with Data Lake Analytics Service
+## Batch Analytics with SQL Data Warehouse Service
 
-![Header Image](images/datalakeanalytics.png)
+SQL Data Warehouse is a cloud-based Enterprise Data Warehouse (EDW) that leverages Massively Parallel Processing (MPP) to quickly run complex queries across petabytes of data. Use SQL Data Warehouse as a key component of a big data solution. Import big data into SQL Data Warehouse with simple PolyBase T-SQL queries, and then use the power of MPP to run high-performance analytics. As you integrate and analyze, the data warehouse will become the single version of truth your business can count on for insights.
 
-Process big data jobs in seconds with Azure Data Lake Analytics. There is no infrastructure to worry about because there are no servers, virtual machines, or clusters to wait for, manage, or tune. Instantly scale the processing power, measured in Azure Data Lake Analytics Units (AU), from one to thousands for each job. You only pay for the processing that you use per job.
-
-U-SQL is a simple, expressive, and extensible language that allows you to write code once and have it automatically parallelized for the scale you need. Process petabytes of data for diverse workload categories such as querying, ETL, analytics, machine learning, machine translation, image processing, and sentiment analysis by leveraging existing libraries written in .NET languages, R, or Python.
+Azure Data Factory is a cloud-based data integration service that allows you to create data-driven workflows in the cloud for orchestrating and automating data movement and data transformation. Using Azure Data Factory, you can create and schedule data-driven workflows (called pipelines) that can ingest data from disparate data stores. It can process and transform the data by using compute services such as Azure HDInsight Hadoop, Spark, Azure Data Lake Analytics, and Azure Machine Learning.
 
 In this lab Learn how to 
 
-* use Data Lake Analytics to run big data analysis jobs that scale to massive data sets
-* how to create and manage batch, real-time, and interactive analytics jobs, and 
-* how to query using the U-SQL language
+* automatically export data coming into Azure IoT Hub for archival.
+* how to create an ingestion pipeline using Azure Data Factory, and
+* how to use Data Warehouse to run big data analysis jobs that scale to massive data sets using familar tools.
 
-## Create Azure Data Lake Analytics Service
+## Create Azure SQL Data Warehouse Service
 
 Create Data Lakae Analytics service to mine data stored in Data Lake Store.
 
 Click on **Create a resource**
 
-![Create Datalake Analytics Service](images/create_resource.png)
+![Create SQL Warehouse Service](images/create_resource.png)
 
-Click on **Data + Analytics**
+Click on **Databases**
 
-![Create Datalake Analytics Service](images/dataanalytics.png)
+![Create SQL Warehouse Service](images/dataanalytics.png)
 
-Click on **Data Lake Analytics**
+Click on **SQL Data Warehouse**
 
-![Create Datalake Analytics Service](images/01_Create_Data_Lake_Analytics_Service.png)
+![Create SQL Warehouse Service](images/01_Create_Data_Lake_Analytics_Service.png)
 
-Pick the Data Lake Store where device telemetry data is being stored from Stream Analytics job
+Create a new logical SQL Server which will act as the front end for your data warehouse
 
-![Pick A Store](images/02_Create_Data_Lake_Pick_Store.png)
+![Create SQL Server](images/02_Create_Data_Lake_Pick_Store.png)
+
+Since our intention is to showcase capabilities rather than performance, choose DW200c as the Performance Level
+
+![Choose Performance](images/03_Create_Data_Lake_Analytics_Performance.png)
 
 Use existing resource group and click on Create button
-
-![Create Service](images/03_Create_Data_Lake_Analytics_Success.png)
 
 ## Create Sample Data and Install Extensions
 
