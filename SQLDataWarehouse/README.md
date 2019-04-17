@@ -1,6 +1,6 @@
 # Batch Analytics
 
-## Batch Analytics with SQL Data Warehouse Service
+## Batch Analytics with SQL Data Warehouse and Data Factory
 
 SQL Data Warehouse is a cloud-based Enterprise Data Warehouse (EDW) that leverages Massively Parallel Processing (MPP) to quickly run complex queries across petabytes of data. Use SQL Data Warehouse as a key component of a big data solution. Import big data into SQL Data Warehouse with simple PolyBase T-SQL queries, and then use the power of MPP to run high-performance analytics. As you integrate and analyze, the data warehouse will become the single version of truth your business can count on for insights.
 
