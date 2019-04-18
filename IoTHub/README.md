@@ -127,8 +127,6 @@ Specify a name for the route, choose your storage account endpoint, and a data s
 
 ![Configure routes](images/create_custom_route_successful.png)
 
-Congratulations!  You will now see AVRO files being created every few minutes in your Azure Storage account.
-
 ## Connect Device and Send Data to IoThub
 
 This Lab assumes you are using MXChip as the Device
@@ -144,6 +142,6 @@ This Lab assumes you are using MXChip as the Device
 
 [Prepare MXChip to Connect to IoTHub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-get-started)
 
-Once Device Connects to IoTHub, messages flow into IoThub
+Once Device Connects to IoTHub, messages flow into IoThub, and into your Azure Storage account.
 
 ![Data Flow](images/06_IoTHub_DeviceCreated_Data_Flowing.png)
