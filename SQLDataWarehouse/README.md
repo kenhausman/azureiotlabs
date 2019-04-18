@@ -14,7 +14,7 @@ In this lab Learn how to
 
 ## Create Azure SQL Data Warehouse Service
 
-Create Data Lakae Analytics service to mine data stored in Data Lake Store.
+Create Data Lake Analytics service to mine data stored in Data Lake Store.
 
 Click on **Create a resource**
 
@@ -38,36 +38,68 @@ Since our intention is to showcase capabilities rather than performance, choose 
 
 Use existing resource group and click on Create button
 
-## Create Sample Data and Install Extensions
+## Create Azure Data Factory Service
 
-Click on Sample scripts 
+Create Data Factory service to ingest data into Data Warehouse.
 
-![Create Sample Data](images/04_Create_Data_Lake_Analytics_Sample_Scripts.png)
+Click on **Create a resource**
 
-Click on sample data missing button to create sample data in Data lake Store 
+![Create Data Factory Service](images/create_resource.png)
 
-![Create Sample Data](images/05_Create_Data_Lake_Analytics_Sample_Data.png)
+Click on **Integration**, then...
 
-You should see successful message after data is copied
+![Create Data Factory Service](images/integration.png)
 
-![Create Sample Data](images/06_Create_Data_Lake_Analytics_Sample_Data_Successful.png)
+Simply name the Data Factory resource, use existing resource group and click on Create button
 
-Install Extensions
+![Create Data Factory](images/06_Create_Data_Factory_Successful.png)
 
-![Install Extensions](images/07_Create_Data_Lake_Analytics_Install_Extensions.png)
+## Create Azure Storage Account
 
-Successful Extension installation
+Create Azure Storage account to store the exported IoTHub messages.
 
-![Install Extensions](images/08_Create_Data_Lake_Analytics_Install_Extensions_Success.png)
+Click on **Create a resource**
+
+![Create Storage Service](images/create_resource.png)
+
+Click on **Storage**, then...
+
+![Create Storage Service](images/01_Create_Storage_Service.png)
+
+Be sure to place to storage account in the **same Location** as the IoTHub you created in the earlier lab.  Choose **Locally-redundant storage (LRS)** and click Create
+
+![Create Storage Service](images/Create_Storage_Service_Successful.png)
+
+After the Storage Account is created, go to the main landing page for the storage, and click on **Blobs**
+
+![click on blobs](images/click_on_blobs.png)
+
+Click on **+ Container**, specify the container name, and hit **OK**
+
+![create container](images/create_container.png)
 
 
-## VS Code Integration
+## Configure IoT Hub to Export Incoming Data
 
-Submit Job using VS Code, Try Samples First to Learn through Data Lake Analytics
+Go to the landing page for IoT Hub and click on **Message routing**
 
-Install VS Code Extension for Data Lake Analytics
+![Configure IoTHub](images/iot_message_routing.png)
 
-![Install Extensions](images/data-lake-tools-for-vscode-extensions.png)
+Click on **Custom endpoints**, then **+ Add**, then choose **Blob storage**
+
+![Configure IoTHub](images/create_custom_endpoint.png)
+
+Specify any name, then click **Pick a container** and choose the storage account you created in the prior step.  Leave the other defaults, and click Create
+
+![Configure IoTHub](images/create_custom_endpoint_successful.png)
+
+Click on **Routes**, and **+ Add**
+
+![Configure routes](images/create_custom_route.png)
+
+Specify a name for the route, choose your storage account endpoint, and a data source of Device Telemetry Messages.
+
+![Configure routes](images/create_custom_route_successful.png)
 
 ### Run Samples
 
