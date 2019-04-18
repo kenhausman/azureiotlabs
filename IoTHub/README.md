@@ -76,6 +76,59 @@ For details about the other tier options, see [Choosing the right IoT Hub tier](
 
 ![Create IoTHub](images/05_Create_IoTHub_Submit_2.png)
 
+## Configure IoT Hub to Archive Messages
+
+In a later lab, we will use SQL Data Warehouse's Polybase capability to perform analysis on the telemetry coming into IoT Hub.  Azure Storage will give us a flexible, performant storage location to house the original messages for later ingestion.  Let's get started...
+
+## Create Azure Storage Account
+
+Create Azure Storage account to store the exported IoTHub messages.
+
+Click on **Create a resource**
+
+![Create Storage Service](images/create_resource.png)
+
+Click on **Storage**, then...
+
+![Create Storage Service](images/01_Create_Storage_Service.png)
+
+Be sure to place to storage account in the **same Location** as the IoTHub you created in the earlier lab.  Choose **Locally-redundant storage (LRS)** and click Create
+
+![Create Storage Service](images/Create_Storage_Service_Successful.png)
+
+After the Storage Account is created, go to the main landing page for the storage, and click on **Blobs**
+
+![click on blobs](images/click_on_blobs.png)
+
+Click on **+ Container**, specify the container name, and hit **OK**
+
+![create container](images/create_container.png)
+
+
+## Configure IoT Hub to Export Incoming Data
+
+Go to the landing page for IoT Hub and click on **Message routing**
+
+![Configure IoTHub](images/iot_message_routing.png)
+
+Click on **Custom endpoints**, then **+ Add**, then choose **Blob storage**
+
+![Configure IoTHub](images/create_custom_endpoint.png)
+
+Specify any name, then click **Pick a container** and choose the storage account you created in the prior step.  Leave the other defaults, and click Create
+
+![Configure IoTHub](images/create_custom_endpoint_successful.png)
+
+Click on **Routes**, and **+ Add**
+
+![Configure routes](images/create_custom_route.png)
+
+Specify a name for the route, choose your storage account endpoint, and a data source of Device Telemetry Messages.
+
+![Configure routes](images/create_custom_route_successful.png)
+
+Congratulations!  You will now see AVRO files being created every few minutes in your Azure Storage account.
+
 ## Connect Device and Send Data to IoThub
 
 This Lab assumes you are using MXChip as the Device
