@@ -28,7 +28,7 @@ Click on **SQL Data Warehouse**
 
 ![Create SQL Warehouse Service](images/01_Create_Data_Lake_Analytics_Service.png)
 
-Create a new logical SQL Server which will act as the front end for your data warehouse
+Create a new logical SQL Server which will act as the front end for your data warehouse.  Note: Record the Server name, admin, and passoword for later.
 
 ![Create SQL Server](images/02_Create_Data_Lake_Pick_Store.png)
 
@@ -37,6 +37,26 @@ Since our intention is to showcase capabilities rather than performance, choose 
 ![Choose Performance](images/03_Create_Data_Lake_Analytics_Performance.png)
 
 Use existing resource group and click on Create button
+
+## Create Datawarehouse Objects
+
+The next thing we will need to do is create the tables necessary for importing the IoT Telemetry.  Connect to you Data Science VM, and launch SQL Server Management Studio.
+
+![SSMS Button](images/SSMS_button.png)
+
+Select **SQL Server Authentication**, and use the credentials you recorded earlier.  If you need the **Server name**, it can be found on the portal page for the database created ealier.
+
+![SQL Server Name](images/sql_server_name.png)
+
+Click on **Connect**.  Note: If you receive a error indicating that you cannot connec to the sql server, check the SQL Server Firewall for you Data Science VM's external IP address.
+
+![SQL Server Firewall](images/sql_server_firewall.png)
+
+Click on **New Query**
+
+Copy the Create Table script from **SQLDW_Create_Telemetry_Table.sql**, and click **Execute**
+
+![SQL Server Firewall](images/create_table.png)
 
 ## Create Azure Data Factory Service
 
@@ -53,3 +73,92 @@ Click on **Integration**, then...
 Simply name the Data Factory resource, use existing resource group and click on Create button
 
 ![Create Data Factory](images/06_Create_Data_Factory_Successful.png)
+
+On the landing page for your Data Factory, click on **Author & Monitor**.
+
+![Create Data Factory](images/adf_author_monitor.png)
+
+Click on **Copy Data**.
+
+![Create Data Factory](images/click_create_pipeline.png)
+
+On the **Properties** page, specify the options below...
+
+![Create Data Factory](images/copy_properties.png)
+
+Click on **Create new connection**, and choose **Azure Data Lake Storage Gen1**.  Click **Continue**
+
+![Create Data Factory](images/create_new_storage.png)
+
+Choose the Azure Data Lake service created in Module 5, and Click **Finish**
+
+![Create Data Factory](images/create_new_storage_success.png)
+
+Now we need to give the **Managed Identity** for Azure Data Factory access to Data Lake.
+
+Back in the portal, in the Data Factory landing page, click on **Properties**.  At the bottom, you will see the Managed Identity for ADF.  This means that ADF can be configured with permissions similar to a standard user account.
+
+![Create Data Factory](images/adf_managed_identity.png)
+
+Now go to the landing page for your Azure Data Lake Store account.  Click on **Data explorer**, then click on **Access**
+
+![Create Data Factory](images/adls_access.png)
+
+Click **+ Add**, **Select user or group**, then type in the name of you Data Factory service, and click **Select**.
+
+![Create Data Factory](images/adls_invite.png)
+
+Give the account all permissions, and be sure to select **This folder and all children**, then click **Ok**.  Note: Least priviledges access at a subfolder level is recommended.
+
+![Create Data Factory](images/adls_permissions.png)
+
+Back in Data Factory, click on **Create new connection** (again), and choose **Azure SQL Data Warehouse**.  Click **Continue**
+
+![Create Data Factory](images/create_new_warehouse.png)
+
+Choose the Azure SQL Data Warehouse created earlier and Click **Finish**
+
+![Create Data Factory](images/create_new_warehouse_success.png)
+
+Now, under **Source data store**, click on the Data Lake connection, and click **Next**
+
+![Create Data Factory](images/source_data.png)
+
+For the input folder, click **Browse**, and select **workshop/streaming** then click **Choose**.
+
+Under **File loading behavior**, choose **Incremental Load**.  Click **Next**
+
+![Create Data Factory](images/adls_input_folder.png)
+
+Under **File format settings**, choose **JSON format**.  Click **Next**
+
+![Create Data Factory](images/adls_json_format.png)
+
+Now, under **Destination data store**, click on the Data Warehouse connection, and click **Next**
+
+![Create Data Factory](images/destination_data.png)
+
+Choose the table name created earlier, and click **Next**
+
+![Create Data Factory](images/pick_table.png)
+
+On the **Column mapping** screen, accept the defaults and click **Next**
+
+![Create Data Factory](images/column_mappings.png)
+
+Uncheck the boxes next to **Enable staging** and **Allow Polybase**, and click **Next**
+
+![Create Data Factory](images/disable_staging.png)
+
+Congratulations!  You've created your first pipeline.  Click **Finish**
+
+![Create Data Factory](images/pipeline_created.png)
+
+Click on the **Monitor** button to see your Pipeline in action
+
+![Create Data Factory](images/pipeline_monitor.png)
+
+Return to SSMS and query the fact_Telemetry table for new records.
+
+![Create Data Factory](images/ssms.png)
+

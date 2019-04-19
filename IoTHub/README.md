@@ -78,7 +78,7 @@ For details about the other tier options, see [Choosing the right IoT Hub tier](
 
 ## Configure IoT Hub to Archive Messages
 
-In a later lab, we will use SQL Data Warehouse's Polybase capability to perform analysis on the telemetry coming into IoT Hub.  Azure Storage will give us a flexible, performant storage location to house the original messages for later ingestion.  Let's get started...
+Azure Storage will give us a flexible, performant storage location to house the original messages for further analysis and/or data verification.  Let's get started...
 
 ## Create Azure Storage Account
 
