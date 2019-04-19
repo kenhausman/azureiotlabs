@@ -56,7 +56,9 @@ Click on **New Query**
 
 Copy the Create Table script from **SQLDW_Create_Telemetry_Table.sql**, and click **Execute**
 
-![SQL Server Firewall](images/create_table.png)
+[SQL Create Script](https://github.com/kenhausman/azureiotlabs/blob/master/SQLDataWarehouse/scripts/SQLDW_Create_Telemetry_Table.sql)
+
+![Create Table](images/create_table.png)
 
 ## Create Azure Data Factory Service
 
