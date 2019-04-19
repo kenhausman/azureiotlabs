@@ -56,7 +56,7 @@ Click on **New Query**
 
 Copy the Create Table script from **SQLDW_Create_Telemetry_Table.sql**, and click **Execute**
 
-[SQL Create Script](https://github.com/kenhausman/azureiotlabs/blob/master/SQLDataWarehouse/scripts/SQLDW_Create_Telemetry_Table.sql)
+[SQL Create Table Script](https://github.com/kenhausman/azureiotlabs/blob/master/SQLDataWarehouse/scripts/SQLDW_Create_Telemetry_Table.sql)
 
 ![Create Table](images/create_table.png)
 
