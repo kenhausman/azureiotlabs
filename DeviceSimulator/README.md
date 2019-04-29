@@ -4,7 +4,7 @@ Learn how to set up a Device Simulator using Azure IoT Suite and Connect to IoTH
 
 ## Create Device Simulator
 
-Go To [Azure IoT Suite](https://www.azureiotsuite.com)
+Go To [Azure IoT Suite](https://www.azureiotsolutions.com/Accelerators)
 
 
 ![Create Device Simulator](images/01_create_new_solution.png)

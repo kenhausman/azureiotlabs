@@ -54,7 +54,32 @@ Click on **Connect**.  Note: If you receive a error indicating that you cannot c
 
 Click on **New Query**
 
-Copy the Create Table script from **SQLDW_Create_Telemetry_Table.sql**, and click **Execute**
+Copy the the following script into the Query window and click **Execute**
+
+```
+CREATE TABLE [dbo].[fact_Telemetry]
+(
+	[messageId] int NULL,
+	[deviceId] varchar(50) NULL,
+	[temperature] numeric(10,5) NULL,
+	[humidity] numeric(10,5) NULL,
+	[EventProcessedUtcTime] varchar(50) NULL,
+	[PartitionId] int NULL,
+	[EventEnqueuedUtcTime] varchar(50) NULL,
+	[time] varchar(50) NULL,
+	[IoTHub.MessageId] varchar(50) NULL,
+	[IoTHub.CorrelationId] varchar(50) NULL,
+	[IoTHub.ConnectionDeviceId] varchar(50) NULL,
+	[IoTHub.ConnectionDeviceGenerationId] varchar(50) NULL,
+	[IoTHub.EnqueuedTime] varchar(50) NULL,
+	[IoTHub.StreamId] varchar(50) NULL
+)
+WITH
+(
+	DISTRIBUTION = HASH ( [deviceId] ),
+	CLUSTERED COLUMNSTORE INDEX
+)
+```
 
 [SQL Create Table Script](https://github.com/kenhausman/azureiotlabs/blob/master/SQLDataWarehouse/scripts/SQLDW_Create_Telemetry_Table.sql)
 
