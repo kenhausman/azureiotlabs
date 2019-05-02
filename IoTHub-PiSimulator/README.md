@@ -29,7 +29,7 @@ Click on the device and copy the primary key connection string.
 
 Click on the link below to go to the PI Simulator 
 
-<a href="https://azure-samples.github.io/raspberry-pi-web-simulator/#GetStarted" target="_blank">Pi Simulator</a>
+[Pi Simulator](https://azure-samples.github.io/raspberry-pi-web-simulator/#GetStarted/?target=_blank)
 
 Replace the connection string with the primary key connection string copied in the previous steps
 
