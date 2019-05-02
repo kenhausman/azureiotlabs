@@ -27,9 +27,9 @@ Click on the device and copy the primary key connection string.
 
 ![Resource Group](images/connection-string.png)
 
-Click on the link below to go to the PI Simulator 
+Right-click the link below and open the PI Simulator in a new window
 
-[Pi Simulator](https://azure-samples.github.io/raspberry-pi-web-simulator/#GetStarted/?target=_blank)
+[Pi Simulator](https://azure-samples.github.io/raspberry-pi-web-simulator/#GetStarted)
 
 Replace the connection string with the primary key connection string copied in the previous steps
 
