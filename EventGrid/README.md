@@ -22,7 +22,7 @@ Click on **Create a resource**
 
 ![Create Resource](images/create_resource.png)
 
-Click on **Enterprise Integration**
+Click on **Integration**
 
 ![Enterprise Integration](images/enterprise_integration.png)
 
