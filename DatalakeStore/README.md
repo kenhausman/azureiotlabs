@@ -12,11 +12,11 @@ Create a hyper scale data lake store to store IoT Data. Click on **Create a reso
 
 ![Create Datalake Store](images/create_resource.png)
 
-Click on **Data + Analytics**
+Click on **Storage**
 
 ![Create Datalake Store](images/dataanalytics.png)
 
-Click on **Data Lake Store**
+Click on **Data Lake Storage Gen1**
 
 ![Create Datalake Store](images/01_Create_Datalake_Store.png)
 
