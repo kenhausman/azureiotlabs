@@ -42,7 +42,7 @@ Use existing resource group and click on Create button
 
 The next thing we will need to do is create the tables necessary for importing the IoT Telemetry.  Connect to you Data Science VM, and launch SQL Server Management Studio.
 
-![SSMS Button](images/SSMS_button.png)
+![SSMS Button](images/SSMS_Button.png)
 
 Select **SQL Server Authentication**, and use the credentials you recorded earlier.  If you need the **Server name**, it can be found on the portal page for the database created ealier.
 
