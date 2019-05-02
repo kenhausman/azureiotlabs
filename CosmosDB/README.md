@@ -66,7 +66,7 @@ Edit existing query to Add new query to consume data from IoTHub and store data 
 
 ```sql
 SELECT
-    *, System.Timestamp as time
+    deviceId, System.Timestamp as time
 INTO
     CosmosDB
 FROM
