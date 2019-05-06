@@ -167,3 +167,5 @@ Once Device Connects to IoTHub, messages flow into IoThub, and into your Azure S
 ![Data Flow](images/06_IoTHub_DeviceCreated_Data_Flowing.png)
 
 ![IoT Storage](images/iot_storage_result.png)
+
+### Continue to [Module 2: Connect Pi Simulator to IoT Hub](../IoTHub-PiSimulator/README.md), or return to the [Main](../README.md) menu
