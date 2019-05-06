@@ -140,6 +140,14 @@ This Lab assumes you are using MXChip as the Device
 * connecting to Azure to select a subscription and IoTHub
 * uploading device code
 
+***Note:*** in the next Azure Docs lab ("Prepare MXChip to Connect to IoTHub"), it is stated that the json settings are under a menu labeled **open settings.json**.  However, in later versions of VSCode, the option was moved into the upper-level menu.
+
+**Old menu**
+![old menu](images/old_settings_menu.png)
+
+**New menu**
+![new menu](images/new_settings_menu.png)
+
 [Prepare MXChip to Connect to IoTHub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-get-started)
 
 Once Device Connects to IoTHub, messages flow into IoThub, and into your Azure Storage account.
