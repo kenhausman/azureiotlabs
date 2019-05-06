@@ -6,6 +6,12 @@ Labs using Azure Services to build Azure IoT End to End Solutions connecting rea
 
 ## Modules
 
+### Setup: Azure subscription access and the Data Science Virtual Machine
+
+**Duration**: 15-30 minutes
+
+[Setup Lab](https://github.com/kenhausman/azureiotlabs/blob/master/Setup/README.md)
+
 ### Module 1: Introduction to Azure IoT Hub and Connect MXChip
 
 **Duration**: 60-90 minutes
