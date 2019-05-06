@@ -158,7 +158,9 @@ This Lab assumes you are using MXChip as the Device
 **New menu**
 ![new menu](images/new_settings_menu.png)
 
-[Prepare MXChip to Connect to IoTHub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-get-started)
+Right-click the link below and open the Azure Docs lab in a new window
+
+: [Prepare MXChip to Connect to IoTHub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-get-started)
 
 Once Device Connects to IoTHub, messages flow into IoThub, and into your Azure Storage account.
 
