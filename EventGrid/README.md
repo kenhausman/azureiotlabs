@@ -160,3 +160,5 @@ Go To IoTHub -> IoT Devices (Device Management) -> Select Device you created in 
 You Should get an email notification
 
 ![Email Notification](images/20_email_generated.png)
+
+### Continue to [Module 5: Cold Path Storage](../DatalakeStore/README.md), or return to the [Main](../README.md) menu
