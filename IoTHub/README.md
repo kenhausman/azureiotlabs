@@ -127,6 +127,16 @@ Specify a name for the route, choose your storage account endpoint, and a data s
 
 ![Configure routes](images/create_custom_route_successful.png)
 
+Now, we need to add a second route.  This route will make sure that all data landing in Azure Storage (as above), is also visible on the built-in endpoint called **events**.  Without this, all data will go to Azure storage (Routing query = true), and nothing will be available to other consumers. 
+
+Click on **Routes**, and **+ Add** (again)
+
+![Configure routes](images/create_custom_route2.png)
+
+Specify a name for the route, choose the **events** endpoint, and a data source of Device Telemetry Messages.  Leave the rest as default, and click **Save**.
+
+![Configure routes](images/create_custom_route_successful2.png)
+
 ## Connect Device and Send Data to IoThub
 
 This Lab assumes you are using MXChip as the Device
