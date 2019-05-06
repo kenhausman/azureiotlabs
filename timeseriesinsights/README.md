@@ -117,3 +117,5 @@ Click on Heatmap
 View data in a table
 
 ![Visualize Data](images/table.png)
+
+### Continue to [Module 4: Capture Device Events and Send Notifications](../EventGrid/README.md), or return to the [Main](../README.md) menu
