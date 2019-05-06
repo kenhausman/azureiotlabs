@@ -168,3 +168,5 @@ Go to Data Lake store data explorer and drill down to /workshop/streaming folder
 You will see json files, with one file per hour, explore the data
 
 ![Explore Streaming Data](images/24_datalake_file.png)
+
+### Continue to [Module 6: Hot Path Analytics](../CosmosDB/README.md), or return to the [Main](../README.md) menu
