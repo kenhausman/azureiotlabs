@@ -21,5 +21,5 @@ After creating an Azure account, you may access the [Azure portal](https://porta
 ## You have completed the prerequisites. 
 
 
-### Continue to [Main Menu](./README.md)
+### Continue to [Main Menu](../README.md)
 
